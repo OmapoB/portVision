@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: portVision
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 123456
+    url: jdbc:postgresql://localhost:5432/portvision_db
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  mail:
+    host: smtp.mail.ru
+    port: 465
+    username: vector.smg@mail.ru
+    password: MyJUeZKsGaXks9FyHPe5
+    protocol: smtps
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl.enable: true
+          starttls.enable: true
+
+host-url: 192.168.88.122:8080

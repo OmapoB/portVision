@@ -1,0 +1,6 @@
+INSERT INTO public.port (air_pollution, id, incident_count, latitude, longitude, rating, ships_in_serve, ships_throughput, water_pollution, description, image_url, name) VALUES (10, 1, 1, 42.886924, 47.663778, 5, 42, 50, 12, 'Порт каспийскийск там тут в гораде', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3DsqWkxxg_hI9MsuM-a0ehaZX9nR2UtIX6A&s', 'Порт Каспийск');
+INSERT INTO public.comment (id, port_id, stars, created_at, author, text) VALUES (1, 1, 5, '2025-10-30 16:00:39.580942 +00:00', 'Алискер Бабаев', 'Порт бомба чесно говоря');
+INSERT INTO public.comment (id, port_id, stars, created_at, author, text) VALUES (2, 1, 4, '2025-10-30 16:00:39.580942 +00:00', 'Гасан Омаров', 'Стреляют, спать не дают');
+INSERT INTO public.comment (id, port_id, stars, created_at, author, text) VALUES (3, 1, 4, '2025-10-30 16:00:39.580942 +00:00', 'Алискер бабаев', 'Порт бомба чесно говоря');
+INSERT INTO public.comment (id, port_id, stars, created_at, author, text) VALUES (4, 1, 4, '2025-10-30 16:00:39.580942 +00:00', 'Кахриман Кахриманов', 'Раз в год и палка стреляет');
+INSERT INTO public.comment (id, port_id, stars, created_at, author, text) VALUES (5, 1, 3, '2025-10-30 16:00:39.580942 +00:00', 'Абдулла Магомедов', 'Знания это сила');

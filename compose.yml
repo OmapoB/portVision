@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-d", "portvision_db" ]
+      interval: 500ms
+      retries: 5
+    environment:
+      TZ: 'GMT+3'
+      PGTZ: 'GMT+3'
+      PGUSER: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: portvision_db
+    ports:
+      - '5432:5432'
+    volumes:
+      - ~/dockerData/hakaton/postgres:/var/lib/postgresql/data
