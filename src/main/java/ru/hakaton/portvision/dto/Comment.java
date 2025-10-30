@@ -1,4 +1,4 @@
-package ru.hakaton.portvision;
+package ru.hakaton.portvision.dto;
 
 import jakarta.persistence.*;
 import lombok.Getter;

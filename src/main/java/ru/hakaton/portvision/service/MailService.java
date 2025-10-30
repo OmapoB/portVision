@@ -1,4 +1,4 @@
-package ru.hakaton.portvision;
+package ru.hakaton.portvision.service;
 
 import org.springframework.stereotype.Service;
 

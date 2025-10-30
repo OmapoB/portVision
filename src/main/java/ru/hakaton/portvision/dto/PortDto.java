@@ -1,9 +1,7 @@
-package ru.hakaton.portvision;
+package ru.hakaton.portvision.dto;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
-import lombok.Value;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
@@ -15,4 +13,5 @@ import java.util.List;
 public class PortDto implements Serializable {
     private Port port;
     private List<Comment> comments;
+    private List<Comment> files;
 }

@@ -1,4 +1,4 @@
-package ru.hakaton.portvision;
+package ru.hakaton.portvision.dto;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

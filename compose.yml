@@ -16,3 +16,14 @@ services:
       - '5432:5432'
     volumes:
       - ~/dockerData/hakaton/postgres:/var/lib/postgresql/data
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portVision
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - '8080:8080'

@@ -1,8 +1,11 @@
-package ru.hakaton.portvision;
+package ru.hakaton.portvision.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import ru.hakaton.portvision.dto.Event;
+import ru.hakaton.portvision.dto.Subscriber;
+import ru.hakaton.portvision.repo.SubscriberRepository;
 
 import java.util.List;
 
@@ -19,7 +22,9 @@ public class SubscriptionService {
     public void send(Event event) {
         List<Subscriber> subscribers = subscriberRepository.findByEventTypeAndTargetId(event.getEventType(), event.getTargetId());
         for (Subscriber e : subscribers) {
-            emailService.sendSimpleEmail(e.getMail(), "Новый комментарий по подписке", event.getBody().concat("\n").concat(hostUrl + "/subscription/" + e.getId()));
+            String body = event.getBody() + "<br>" +
+                   "<a href=\"http://" + hostUrl + "/subscription/" + e.getId() + "\">Отписаться</a>";
+            emailService.sendSimpleEmail(e.getMail(), "Новый комментарий/отчет по подписке", body);
         }
     }
 
